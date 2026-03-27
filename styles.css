@@ -5,64 +5,85 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    font-family: 'Courier New', Consolas, Monaco, monospace;
+    line-height: 1.8;
+    color: #00ff41;
+    background-color: #0a0a0a;
+    background-image:
+        radial-gradient(ellipse at top, #0d1a0d 0%, transparent 50%),
+        linear-gradient(0deg, transparent 24%, rgba(0, 255, 65, 0.03) 25%, rgba(0, 255, 65, 0.03) 26%, transparent 27%, transparent 74%, rgba(0, 255, 65, 0.03) 75%, rgba(0, 255, 65, 0.03) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 40px auto;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid #00ff41;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3), inset 0 0 20px rgba(0, 255, 65, 0.05);
     padding: 50px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .header {
     text-align: center;
     margin-bottom: 40px;
     padding-bottom: 30px;
-    border-bottom: 2px solid #eee;
+    border-bottom: 1px dashed #00ff41;
 }
 
 .header h1 {
-    font-size: 2.5em;
-    color: #2c3e50;
+    font-size: 3em;
+    color: #00ff41;
+    text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
     margin-bottom: 10px;
+    letter-spacing: 3px;
 }
 
 .title {
     font-size: 1.2em;
-    color: #666;
+    color: #00cc33;
     margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
     font-size: 0.9em;
-    color: #555;
+    color: #00cc33;
+}
+
+.contact-info span {
+    padding: 5px 10px;
+    border: 1px solid #003300;
+    background: rgba(0, 255, 65, 0.1);
 }
 
 .section {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .section-title {
-    font-size: 1.3em;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    padding-left: 10px;
-    border-left: 4px solid #3498db;
+    font-size: 1.4em;
+    color: #00ff41;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #00ff41;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #00ff41;
 }
 
 .bio {
-    color: #555;
+    color: #00cc33;
     line-height: 1.8;
     margin-bottom: 15px;
+    padding: 15px;
+    border-left: 2px solid #003300;
+    background: rgba(0, 255, 65, 0.05);
 }
 
 .advantage-list {
@@ -71,137 +92,184 @@ body {
 }
 
 .advantage-list li {
-    color: #555;
-    margin-bottom: 12px;
+    color: #00dd38;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    padding-left: 30px;
+    position: relative;
+    border-left: 1px solid #003300;
+    background: rgba(0, 255, 65, 0.03);
+}
+
+.advantage-list li::before {
+    content: ">";
+    color: #00ff41;
+    position: absolute;
+    left: 10px;
+    text-shadow: 0 0 5px #00ff41;
+}
+
+.advantage-list li strong {
+    color: #00ff41;
+    text-shadow: 0 0 3px #00ff41;
+}
+
+.experience .job {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #003300;
+    background: rgba(0, 255, 65, 0.03);
+}
+
+.experience .job h3 {
+    font-size: 1.2em;
+    color: #00ff41;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px #00ff41;
+}
+
+.experience .job .company {
+    color: #00cc33;
+    font-size: 0.95em;
+    margin: 5px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #003300;
+}
+
+.experience .job ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience .job ul li {
+    color: #00dd38;
+    margin-bottom: 8px;
     padding-left: 20px;
     position: relative;
 }
 
-.advantage-list li::before {
-    content: "•";
-    color: #3498db;
+.experience .job ul li::before {
+    content: "[-]";
+    color: #00ff41;
     position: absolute;
     left: 0;
+    font-size: 0.8em;
 }
 
-.experience .job {
-    margin-bottom: 25px;
+.projects .project {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #003300;
+    background: rgba(0, 255, 65, 0.03);
 }
 
-.experience .job h3 {
-    font-size: 1.1em;
-    color: #333;
-}
-
-.experience .job .company {
-    color: #666;
-    font-size: 0.95em;
-    margin: 5px 0 10px;
-}
-
-.experience .job ul {
-    list-style-position: inside;
-    color: #555;
-}
-
-.experience .job ul li {
+.projects .project h3 {
+    font-size: 1.2em;
+    color: #00ff41;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: 5px;
+    text-shadow: 0 0 5px #00ff41;
 }
 
-.skills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.projects .project .project-time {
+    color: #00994d;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-.skill-category h3 {
-    font-size: 1em;
-    color: #333;
+.projects .project .project-desc {
+    color: #00cc33;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    padding: 10px;
+    border-left: 2px solid #003300;
+    background: rgba(0, 255, 65, 0.05);
+}
+
+.projects .project ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.projects .project ul li {
+    color: #00dd38;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.projects .project ul li::before {
+    content: "[+]";
+    color: #00ff41;
+    position: absolute;
+    left: 0;
+    font-size: 0.8em;
+}
+
+.projects .project ul li strong {
+    color: #00ff41;
+}
+
+.projects .project .achievement {
+    background: rgba(0, 255, 65, 0.08);
+    padding: 15px;
+    border-left: 3px solid #00ff41;
+    margin-top: 15px;
+}
+
+.projects .project .achievement strong {
+    color: #00ff41;
+    text-shadow: 0 0 3px #00ff41;
+}
+
+.projects .project .achievement ul {
+    margin-top: 10px;
+}
+
+.projects .project .achievement li {
+    color: #00dd38;
     margin-bottom: 5px;
-}
-
-.skill-category p {
-    color: #666;
-    font-size: 0.95em;
 }
 
 .education h3 {
     font-size: 1.1em;
-    color: #333;
+    color: #00ff41;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
 }
 
 .education p {
-    color: #666;
+    color: #00cc33;
     margin-top: 5px;
-}
-
-.projects .project {
-    margin-bottom: 15px;
-}
-
-.projects .project h3 {
-    font-size: 1.1em;
-    color: #2c3e50;
-    margin-bottom: 5px;
-}
-
-.projects .project .project-time {
-    color: #666;
-    font-size: 0.9em;
-    margin-bottom: 10px;
-}
-
-.projects .project .project-desc {
-    color: #555;
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-.projects .project ul {
-    list-style-position: inside;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.projects .project ul li {
-    margin-bottom: 5px;
-}
-
-.projects .project .achievement {
-    background: #f8f9fa;
-    padding: 12px 15px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.projects .project .achievement ul {
-    margin-top: 8px;
-}
-
-.projects .project .achievement li {
-    margin-bottom: 5px;
 }
 
 .footer {
     text-align: center;
     padding-top: 30px;
-    border-top: 1px solid #eee;
-    color: #666;
+    border-top: 1px dashed #00ff41;
+    color: #00994d;
 }
 
 .footer a {
-    color: #3498db;
+    color: #00ff41;
     text-decoration: none;
+    text-shadow: 0 0 5px #00ff41;
 }
 
 .footer a:hover {
-    text-decoration: underline;
+    text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
 }
 
 @media (max-width: 600px) {
     .container {
         margin: 20px;
-        padding: 30px;
+        padding: 25px;
     }
 
     .header h1 {
@@ -210,10 +278,23 @@ body {
 
     .contact-info {
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
     }
 
-    .skills {
-        grid-template-columns: 1fr;
+    .section-title {
+        font-size: 1.2em;
     }
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    92% { opacity: 1; }
+    93% { opacity: 0.8; }
+    94% { opacity: 1; }
+    96% { opacity: 0.9; }
+    97% { opacity: 1; }
+}
+
+.header h1 {
+    animation: flicker 4s infinite;
 }
